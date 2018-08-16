@@ -4,11 +4,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule, MatCheckboxModule, MatListModule, MatToolbarModule} from "@angular/material";
+import {MatCardModule, MatCheckboxModule, MatGridListModule, MatListModule, MatToolbarModule} from "@angular/material";
 import {RouterModule} from "@angular/router";
 import {routing} from "./app.routing";
 import {HomeComponent} from "./home/home.component";
 import {MystuffComponent} from "./mystuff/mystuff.component";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -20,10 +21,12 @@ import {MystuffComponent} from "./mystuff/mystuff.component";
     routing,
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ],
   exports: [
     RouterModule
