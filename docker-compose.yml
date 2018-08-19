@@ -5,3 +5,7 @@ services:
     ports:
       - 32001:80
     command: /bin/bash -c "nginx -g 'daemon off;'"
+    deploy:
+      placement:
+              constraints:
+               - node.hostname == webtree-prod
