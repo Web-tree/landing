@@ -9,3 +9,6 @@ services:
       placement:
               constraints:
                - node.hostname == webtree-prod
+networks:
+  lb:
+    external: true
