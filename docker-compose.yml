@@ -6,6 +6,15 @@ services:
       - 32001:80
     command: /bin/bash -c "nginx -g 'daemon off;'"
     deploy:
+      labels:
+        - "traefik.port=80"
+        - "traefik.frontend.rule=Host:webtree.org"
+        - "traefik.docker.network=lb"
       placement:
               constraints:
                - node.hostname == webtree-prod
+    networks:
+      - lb
+networks:
+  lb:
+    external: true
