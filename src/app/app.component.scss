@@ -1,3 +1,15 @@
+header {
+  height: 67px;
+  color: #130101;
+  a {
+    color: #130101 !important;
+  }
+  .brand {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 14pt;
+    margin-left: 17px;
+  }
+}
 header mat-toolbar a.brand {
   color: #fff;
 }
