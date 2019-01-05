@@ -1,9 +1,7 @@
 version: '3.3'
 services:
   landing:
-    image: webtree/landing:dev
-    ports:
-      - 32001:80
+    image: webtree/landing:prod
     command: /bin/bash -c "nginx -g 'daemon off;'"
     deploy:
       labels:
