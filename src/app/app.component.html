@@ -1,12 +1,13 @@
 <div class="container">
-  <header>
-    <mat-toolbar color="primary"><a class="brand" href="/">Web Tree</a></mat-toolbar>
+  <header class="container">
+    <mat-toolbar color="primary">
+      <img id="main-logo" [src]="LOGO" alt="WebTree"/>
+      <a class="brand" href="/">Web Tree</a>
+    </mat-toolbar>
   </header>
 
   <div class="content">
-    <mat-card>
       <router-outlet></router-outlet>
-    </mat-card>
   </div>
 
   <footer></footer>

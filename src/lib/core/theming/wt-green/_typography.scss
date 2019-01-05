@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$general-typography: mat-typography-config(
+  $font-family: 'Lato, sans-serif',
+  $body-2:        mat-typography-level(14px, 24px, 600)
+);
+
+@include mat-core($general-typography);
