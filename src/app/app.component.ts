@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private LOGO = '/assets/logo.png';
+  LOGO = '/assets/logo.png';
 }
