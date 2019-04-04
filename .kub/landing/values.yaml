@@ -24,7 +24,7 @@ ingress:
   paths:
     - /
   hosts:
-    - landing.dev.webtree.org
+    - webtree.org
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
