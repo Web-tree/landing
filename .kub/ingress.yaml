@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: webtree-site
+  namespace: webtree
+  annotations:
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+    traefik.ingress.kubernetes.io/redirect-regex: "^https?://webtree.org/(.*)"
+    traefik.ingress.kubernetes.io/redirect-replacement: https://www.webtree.org/$1
+    traefik.ingress.kubernetes.io/preserve-host: "true"
+spec:
+  rules:
+    - host: webtree.org
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: webtree-site-proxy
+              servicePort: https
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webtree-site-proxy
+  namespace: webtree
+spec:
+  ports:
+    - protocol: TCP
+      name: https
+      port: 443
+      targetPort: 443
+  type: ExternalName
+  externalName: www.webtree.org
